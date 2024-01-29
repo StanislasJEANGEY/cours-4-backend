@@ -7,7 +7,7 @@ use PHPUnit\Framework\TestCase;
 
 class PersonTest extends TestCase
 {
-    public function testSetName()
+    public function testSetName(): void
     {
         $person = new Person();
         $person->setName('John Doe');
@@ -15,7 +15,7 @@ class PersonTest extends TestCase
         $this->assertEquals('John Doe', $person->getName());
     }
 
-    public function testSetAge()
+    public function testSetAge(): void
     {
         $person = new Person();
         $person->setAge(30);

@@ -6,6 +6,7 @@ use App\Entity\Person;
 use App\Entity\Test;
 use Doctrine\ORM\EntityManager;
 use Doctrine\ORM\EntityManagerInterface;
+use Faker\Factory;
 use Symfony\Component\Console\Attribute\AsCommand;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputArgument;
@@ -20,7 +21,7 @@ use Symfony\Component\Console\Style\SymfonyStyle;
 )]
 class AddDataCommand extends Command
 {
-    private $entityManager;
+    private EntityManagerInterface $entityManager;
     public function __construct(EntityManagerInterface $entityManager)
     {
         $this->entityManager = $entityManager;
