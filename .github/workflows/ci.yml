@@ -14,12 +14,6 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
-    - name: Validate composer.json and composer.lock
-      run: composer validate
-
-    - name: Install Dependencies
-      run: composer install --prefer-dist --no-progress --no-suggest
-
     - name: Run phpstan
       run: vendor/bin/phpstan analyse
 
